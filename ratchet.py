@@ -106,7 +106,7 @@ def main():
     H_ext_dir = np.array([np.sin(theta_H), 0, np.cos(theta_H)], dtype=np.float64)
     H_1 = 2*K[1]/(mu_0*M_s) - M_s + Delta_J/(mu_0*M_s*d[1]) + eps_1*((2/(mu_0*M_s)*(Delta_K)) + \
           Delta_J/(mu_0*M_s)*(Delta_d)/(d[0]*d[1]))
-    H_2 = -2*K[1]/(mu_0*M_s) + M_s + Delta_J/(mu_0*M_s*d[1]) - eps_2*((-2/(mu_0*M_s)*(Delta_K)) + \
+    H_2 = -2*K[0]/(mu_0*M_s) + M_s + Delta_J/(mu_0*M_s*d[0]) - eps_2*((-2/(mu_0*M_s)*(Delta_K)) + \
           Delta_J/(mu_0*M_s)*(Delta_d)/(d[0]*d[1]))
     H_ext_amps = np.array([H_1, H_2])
     H_ext_times = np.array([1.5e-9, 1.5e-9]) # Must have the same length as H_ext_amps
